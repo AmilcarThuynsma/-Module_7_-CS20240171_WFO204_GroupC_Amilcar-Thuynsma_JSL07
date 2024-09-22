@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // 🚨 Get input values
       const studentNameInput = document.getElementById('studentName');
-      const personalMessageInput = document.getElementById*('personalMessage');
-      const courseNameInput = document.getElementById*('courseNmae'); 
+      const personalMessageInput = document.getElementById('personalMessage');
+      const courseNameInput = document.getElementById('courseName'); 
   
       const studentName = studentNameInput.value;
       const personalMessage = personalMessageInput.value;
@@ -26,7 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // 🚨 Generate certificate content dynamically
       certificateContent.innerHTML = `
-      <h3>${studentName}</h3>
+     <div class="certificate">
+                <h1>Certificate of Achievement</h1>
+                <p>This is to certify that</p>
+                <h2>${studentName}</h2>
+                <p>has almost completed the</p>
+                <h3>${courseName}</h3>
+                <p>with legendary perseverance and world-class bad-assery for never giving up 🏆</p>
+                <div class="certificate-footer">
+                    <img src="codespace_logo.png" alt="CodeSpace Logo" class="logo">
+                    <p>imagine • learn • create</p>
+                </div>
+                <p>${personalMessage}</p>
+            </div>
     `;
     
       //  Display the modal
@@ -42,5 +54,13 @@ document.addEventListener('DOMContentLoaded', function () {
     closeModal.addEventListener('click', function () {
       modal.style.display = 'none';
     });
+
+    // Close the modal if clicking outside of it
+    window.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    })
+
   });
   
