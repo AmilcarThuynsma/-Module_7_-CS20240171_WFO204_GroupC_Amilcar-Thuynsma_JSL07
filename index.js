@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // 🚨 Get input values
       const studentNameInput = document.getElementById('studentName');
-      const personalMessageInput = ;
-      const courseNameInput = ; 
+      const personalMessageInput = document.getElementById*('personalMessage');
+      const courseNameInput = document.getElementById*('courseNmae'); 
   
       const studentName = studentNameInput.value;
       const personalMessage = personalMessageInput.value;
